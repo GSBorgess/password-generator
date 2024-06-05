@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* VARIABLES */
+:root {
+    --color-primary-light: #29A19C;
+    --color-primary-dark: #29A19Ca6;
+
+    --color-white: #f8fafc;
+    --color-gray: #2C3440;
+    --color-black: #222831;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-black);
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#title {
+    color: var(--color-white);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#password-container {
+    width: 100%;
+    max-width: 400px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 8px 18px;
+}
+
+#password-container.show {
+    display: flex;
+}
+#password {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#copy {
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary-light);
+    height: 40px;
+    width: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color .4s;
+}
+
+#copy:hover {
+    color: var(--color-primary-dark);
+}
+
+#password-items {
+    width: 400px;
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px;
+}
+
+.item {
+    display: flex;
+    gap: 14px;
+}
+
+#size {
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+}
+
+#size::-webkit-inner-spin-button,
+#size::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+#size:focus {
+    outline: 1px solid var(--color-primary-light);
+}
+
+#generate {
+    background-color: var(--color-primary-light);
+    border: none;
+    margin-top: 12px;
+    padding: 10px 0;
+    border-radius: 4px;
+    color: var(--color-black);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+#generate:hover {
+    background-color: var(--color-primary-dark);
+}
